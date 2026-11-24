@@ -1,0 +1,28 @@
+<UserControl
+    x:Class="TexterRename.Controls.FolderInputRow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid ColumnSpacing="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="82" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Horizontal" Spacing="9" VerticalAlignment="Center">
+            <PathIcon x:Name="RowIcon" Width="15" Height="14" Foreground="#D4D8DF" />
+            <TextBlock x:Name="RowLabel" FontSize="13" Foreground="#E4E7EC" VerticalAlignment="Center" />
+        </StackPanel>
+
+        <TextBox x:Name="PathBox"
+                 Grid.Column="1"
+                 Style="{StaticResource PathTextBoxStyle}" />
+
+        <Button x:Name="BrowseButton"
+                Grid.Column="2"
+                Content="Browse Folder"
+                Style="{StaticResource BrowseButtonStyle}"
+                Click="OnBrowseButtonClick" />
+    </Grid>
+</UserControl>
